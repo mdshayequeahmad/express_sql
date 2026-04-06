@@ -13,10 +13,10 @@ app.get('/', (req, res) => {
 
 app.use('/students', studentsRoutes);
 
-db.sync({force: true}).then(() => {
+db.sync({ force: false, alter: false }).then(() => {
     app.listen(3000, (err) => {
         console.log(`Server is running`);
     });
 }).catch((err) => {
     console.log(err);
-})
+});
