@@ -4,6 +4,7 @@ const studentsRoutes = require('./routes/studentsRoutes');
 const app = express();
 
 const studentModel = require('./models/students');
+require('./models');
 
 app.use(express.json());
 
